@@ -9,6 +9,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/datastructure" />
+            <option value="$PROJECT_DIR$/java_data_structure" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
