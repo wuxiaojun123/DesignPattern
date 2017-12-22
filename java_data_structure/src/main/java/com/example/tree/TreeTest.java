@@ -179,8 +179,8 @@ public class TreeTest {
 
             }
 
+            return isLeftChild;
         }
-
 
         public void delete(int key) {
 
