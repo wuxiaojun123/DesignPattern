@@ -1,1 +1,1 @@
-include ':app', ':datastructure', ':java_data_structure', ':java_jichu'
+include ':app', ':datastructure', ':java_data_structure', ':java_jichu', ':java_designpattern'

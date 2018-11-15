@@ -29,7 +29,6 @@ public class Test1 {
         int d = 1;
         int f = ++d + d++; // d=3,f=4
         System.out.println("d=" + d + "f=" + f);
-
     }
 
 }
