@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.wxj.design.pattern.MainActivity">
+    android:divider="@drawable/shape_line"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    tools:context="com.wxj.design.pattern.activity.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:id="@+id/id_yahu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="雅虎效果"
+        android:textColor="@color/aqua" />
+
+    <TextView
+        android:id="@+id/id_kugou"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="酷狗音乐的视差动画效果"
+        android:textColor="@color/aqua" />
+
+    <TextView
+        android:id="@+id/id_viewdraghelper"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="viewdraghelper"
+        android:textColor="@color/aqua" />
+
+    <TextView
+        android:id="@+id/id_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="recyclerview的下拉刷新和加载更多"
+        android:textColor="@color/aqua" />
+
+    <TextView
+        android:id="@+id/id_stick_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="StickyNavLayout的连续滑动事件传递"
+        android:textColor="@color/aqua" />
+
+    <TextView
+        android:id="@+id/id_mutil_item"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="多条目菜单筛选"
+        android:textColor="@color/aqua" />
+
+
+</LinearLayout>
