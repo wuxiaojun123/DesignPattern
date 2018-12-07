@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 	private TextView	id_mutil_item;
 
+	private TextView	id_text_color;
+
 	@Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		id_viewdraghelper = (TextView) findViewById(R.id.id_viewdraghelper);
 		id_stick_layout = (TextView) findViewById(R.id.id_stick_layout);
 		id_mutil_item = (TextView) findViewById(R.id.id_mutil_item);
+		id_text_color = (TextView) findViewById(R.id.id_text_color);
 
 		id_yahu.setOnClickListener(this);
 		id_kugou.setOnClickListener(this);
@@ -43,11 +46,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		id_viewdraghelper.setOnClickListener(this);
 		id_stick_layout.setOnClickListener(this);
 		id_mutil_item.setOnClickListener(this);
+		id_text_color.setOnClickListener(this);
 	}
 
 	@Override public void onClick(View v) {
 		int id = v.getId();
 		switch (id) {
+			case R.id.id_text_color:
+				startActivity(new Intent(MainActivity.this,TextColorActivity.class));
+
+				break;
 			case R.id.id_yahu:
 				startActivity(new Intent(MainActivity.this, YahuActivity.class));
 
@@ -69,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 				break;
 			case R.id.id_mutil_item:
-				startActivity(new Intent(MainActivity.this,MultipleMenuActivity.class));
+				startActivity(new Intent(MainActivity.this, MultipleMenuActivity.class));
 
 				break;
 		}

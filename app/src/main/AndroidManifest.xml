@@ -21,6 +21,7 @@
         <activity android:name=".activity.KuGouActivity" />
         <activity android:name=".activity.StickyActivity" />
         <activity android:name=".activity.ViewDragHelperActivity" />
+        <activity android:name=".activity.TextColorActivity" />
 
     </application>
 

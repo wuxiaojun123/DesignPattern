@@ -10,6 +10,14 @@
     tools:context="com.wxj.design.pattern.activity.MainActivity">
 
     <TextView
+        android:id="@+id/id_text_color"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="第四天--字体变色"
+        android:textColor="@color/aqua" />
+
+    <TextView
         android:id="@+id/id_yahu"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -56,6 +64,8 @@
         android:gravity="center"
         android:text="多条目菜单筛选"
         android:textColor="@color/aqua" />
+
+
 
 
 </LinearLayout>
