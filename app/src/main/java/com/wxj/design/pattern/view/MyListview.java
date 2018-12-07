@@ -28,6 +28,15 @@ public class MyListview extends ListView {
 		super(context, attrs, defStyleAttr);
 	}
 
+	@Override
+	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+		// 解决显示不全的问题,具体在listview的源码里面
+		// 为何要右移两位，因为Integer.MAC_VALUE是一个32位的值，只有加上测量模式才能拼成32位的值
+
+		heightMeasureSpec = MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE>>2,MeasureSpec.AT_MOST);
+		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+	}
+
 	@Override public boolean dispatchTouchEvent(MotionEvent ev) {
 		boolean flag = super.dispatchTouchEvent(ev);
 //		Log.e(TAG, "dispatchTouchEvent==========" + flag);
