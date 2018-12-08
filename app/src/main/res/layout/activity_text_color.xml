@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <com.wxj.design.pattern.view.ColorTrackTextView
+    <!--<com.wxj.design.pattern.view.ColorTrackTextView
+        android:id="@+id/id_color_track_textview"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:text="Hello World!!!"
         android:textSize="20dp"
         app:changeColor="@color/pink"
-        app:originColor="@color/black"
-        />
+        app:originColor="@color/black" />-->
+
+    <LinearLayout
+        android:id="@+id/id_ll_indictors"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

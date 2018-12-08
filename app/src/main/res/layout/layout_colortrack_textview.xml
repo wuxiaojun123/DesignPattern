@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wxj.design.pattern.view.ColorTrackTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_color_track_view"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:text="hello world"
+    android:textSize="18dp"
+    app:changeColor="@color/pink"
+    app:originColor="@color/black" />

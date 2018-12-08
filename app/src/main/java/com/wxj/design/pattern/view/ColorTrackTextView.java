@@ -18,15 +18,23 @@ import com.wxj.design.pattern.R;
 
 public class ColorTrackTextView extends android.widget.TextView {
 
-	private int		originColor;
+	private int			originColor;
 
-	private int		changeColor;
+	private int			changeColor;
 
-	private Paint	mOriginPaint;
+	private Paint		mOriginPaint; // 原始颜色
 
-	private Paint	mChangePaint;
+	private Paint		mChangePaint; // 改变的颜色
 
-	private float	mCurrentProgress	= 0.5f;
+	// 当前进度
+	private float		mCurrentProgress	= 0f;
+
+	// 实现不同的朝向
+	private Direction	mDirection			= Direction.LEFT_TO_RIGHT;
+
+	public enum Direction {
+		LEFT_TO_RIGHT, RIGHT_TO_LEFT
+	}
 
 	public ColorTrackTextView(Context context) {
 		this(context, null);
@@ -76,8 +84,15 @@ public class ColorTrackTextView extends android.widget.TextView {
 	 */
 	@Override protected void onDraw(Canvas canvas) {
 		int middle = (int) (mCurrentProgress * getWidth());
-		drawText(canvas,mOriginPaint,0,middle);
-		drawText(canvas,mChangePaint,middle,getWidth());
+
+		// 从左变到右,左边是红色，右边是黑色
+		if (mDirection == Direction.LEFT_TO_RIGHT) {
+			drawText(canvas, mChangePaint , 0, middle);
+			drawText(canvas, mOriginPaint, middle, getWidth());
+		} else {
+			drawText(canvas, mChangePaint , getWidth() - middle, getWidth());
+			drawText(canvas, mOriginPaint, 0, getWidth() - middle);
+		}
 	}
 
 	private void drawText(Canvas canvas, Paint paint, int start, int end) {
@@ -98,6 +113,21 @@ public class ColorTrackTextView extends android.widget.TextView {
 		canvas.restore();
 	}
 
+	public void setDirection(Direction direction) {
+		this.mDirection = direction;
+	}
 
+	public void setCurrentProgress(float progress) {
+		this.mCurrentProgress = progress;
+		invalidate();
+	}
+
+	public void setOriginColor(int originColor){
+		this.originColor = originColor;
+	}
+
+	public void setChangeColor(int changeColor){
+		this.changeColor = changeColor;
+	}
 
 }
