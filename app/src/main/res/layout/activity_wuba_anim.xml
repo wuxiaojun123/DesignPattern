@@ -6,10 +6,9 @@
     android:orientation="vertical">
 
 
-    <com.wxj.design.pattern.view.ShapeView
-        android:id="@+id/id_shape_view"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center" />
+    <com.wxj.design.pattern.view.WuBaLoadingView
+        android:id="@+id/id_wuba_loadingview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

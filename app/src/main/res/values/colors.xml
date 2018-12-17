@@ -21,5 +21,9 @@
         <item>@color/green</item>
     </array>
 
+    <color name="color_aa72d572">#aa72d572</color>
+    <color name="color_aa738ffe">#aa738ffe</color>
+    <color name="color_aae84e40">#aae84e40</color>
+
 
 </resources>
