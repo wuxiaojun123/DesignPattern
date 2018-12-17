@@ -141,7 +141,6 @@ public class StickyNavLayout extends LinearLayout implements NestedScrollingPare
 				mOffsetAnimator.setIntValues(currentOffset, 0);
 				mOffsetAnimator.start();
 			}
-
 		}
 	}
 

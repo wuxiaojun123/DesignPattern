@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 	private TextView	id_text_color;
 
+	private TextView	id_wuba_anim;
+
+	private TextView	id_recycler_custom_layoutmanager;
+
 	@Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
@@ -39,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		id_stick_layout = (TextView) findViewById(R.id.id_stick_layout);
 		id_mutil_item = (TextView) findViewById(R.id.id_mutil_item);
 		id_text_color = (TextView) findViewById(R.id.id_text_color);
+		id_wuba_anim = (TextView) findViewById(R.id.id_wuba_anim);
+		id_recycler_custom_layoutmanager = (TextView) findViewById(R.id.id_recycler_custom_layoutmanager);
 
 		id_yahu.setOnClickListener(this);
 		id_kugou.setOnClickListener(this);
@@ -47,13 +53,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		id_stick_layout.setOnClickListener(this);
 		id_mutil_item.setOnClickListener(this);
 		id_text_color.setOnClickListener(this);
+		id_wuba_anim.setOnClickListener(this);
+		id_recycler_custom_layoutmanager.setOnClickListener(this);
 	}
 
 	@Override public void onClick(View v) {
 		int id = v.getId();
 		switch (id) {
 			case R.id.id_text_color:
-				startActivity(new Intent(MainActivity.this,TextColorActivity.class));
+				startActivity(new Intent(MainActivity.this, TextColorActivity.class));
 
 				break;
 			case R.id.id_yahu:
@@ -78,6 +86,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 				break;
 			case R.id.id_mutil_item:
 				startActivity(new Intent(MainActivity.this, MultipleMenuActivity.class));
+
+				break;
+			case R.id.id_wuba_anim:
+				startActivity(new Intent(MainActivity.this, WuBaAnimActivity.class));
+
+				break;
+			case R.id.id_recycler_custom_layoutmanager:
+				startActivity(new Intent(MainActivity.this,CustomLayoutmanagerActivity.class));
 
 				break;
 		}

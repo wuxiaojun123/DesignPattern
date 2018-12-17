@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
-        android:text="viewdraghelper"
+        android:text="viewdraghelper汽车之家效果"
         android:textColor="@color/aqua" />
 
     <TextView
@@ -47,6 +47,14 @@
         android:layout_height="50dp"
         android:gravity="center"
         android:text="recyclerview的下拉刷新和加载更多"
+        android:textColor="@color/aqua" />
+
+    <TextView
+        android:id="@+id/id_recycler_custom_layoutmanager"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="recyclerview之自定义layoutmanager"
         android:textColor="@color/aqua" />
 
     <TextView
@@ -65,7 +73,13 @@
         android:text="多条目菜单筛选"
         android:textColor="@color/aqua" />
 
-
+    <TextView
+        android:id="@+id/id_wuba_anim"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="58同城动画效果"
+        android:textColor="@color/aqua" />
 
 
 </LinearLayout>

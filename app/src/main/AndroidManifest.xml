@@ -22,6 +22,7 @@
         <activity android:name=".activity.StickyActivity" />
         <activity android:name=".activity.ViewDragHelperActivity" />
         <activity android:name=".activity.TextColorActivity" />
+        <activity android:name=".activity.WuBaAnimActivity" />
 
     </application>
 
