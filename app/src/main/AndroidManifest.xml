@@ -23,6 +23,8 @@
         <activity android:name=".activity.ViewDragHelperActivity" />
         <activity android:name=".activity.TextColorActivity" />
         <activity android:name=".activity.WuBaAnimActivity" />
+        <activity android:name=".activity.HuaweiLoadingActivity" />
+        <activity android:name=".activity.MultipleMenuActivity" />
 
     </application>
 

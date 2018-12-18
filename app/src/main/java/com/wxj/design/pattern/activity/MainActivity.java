@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 	private TextView	id_recycler_custom_layoutmanager;
 
+	private TextView id_huawei_anim;
+
+
 	@Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		id_text_color = (TextView) findViewById(R.id.id_text_color);
 		id_wuba_anim = (TextView) findViewById(R.id.id_wuba_anim);
 		id_recycler_custom_layoutmanager = (TextView) findViewById(R.id.id_recycler_custom_layoutmanager);
+		id_huawei_anim = (TextView) findViewById(R.id.id_huawei_anim);
 
 		id_yahu.setOnClickListener(this);
 		id_kugou.setOnClickListener(this);
@@ -55,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		id_text_color.setOnClickListener(this);
 		id_wuba_anim.setOnClickListener(this);
 		id_recycler_custom_layoutmanager.setOnClickListener(this);
+		id_huawei_anim.setOnClickListener(this);
 	}
 
 	@Override public void onClick(View v) {
@@ -96,6 +101,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 				startActivity(new Intent(MainActivity.this,CustomLayoutmanagerActivity.class));
 
 				break;
+			case R.id.id_huawei_anim:
+				startActivity(new Intent(MainActivity.this,HuaweiLoadingActivity.class));
+
+				break;
+
 		}
 	}
 

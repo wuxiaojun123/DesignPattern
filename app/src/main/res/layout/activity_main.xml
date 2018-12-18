@@ -81,5 +81,13 @@
         android:text="58同城动画效果"
         android:textColor="@color/aqua" />
 
+    <TextView
+        android:id="@+id/id_huawei_anim"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="华为动画效果"
+        android:textColor="@color/aqua" />
+
 
 </LinearLayout>
