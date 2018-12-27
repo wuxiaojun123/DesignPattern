@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/id_btn_request"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="请求网络结果" />
+
+    <TextView
+        android:id="@+id/id_tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="网络请求结果" />
+
+</LinearLayout>

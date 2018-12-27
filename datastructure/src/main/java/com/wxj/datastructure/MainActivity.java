@@ -1,25 +1,50 @@
 package com.wxj.datastructure;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.wxj.datastructure.aop.AOPActivity;
+import com.wxj.datastructure.http.HttpActivity;
 
-    private static final String TAG = "MainActivity";
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+/****
+ * 
+ * 系统架构篇
+ * 
+ */
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-        String url = "http://test-ic-static.sayabc.com/course/materialSAYABC/TR-L1-U1-L1/f0a5efcc1f9c736203d85b7a4f5a7777.mp3";
-        Uri uri = Uri.parse(url);
-        // 截取
-        Log.e(TAG,uri.getPath());
+	@BindView(R.id.id_tv_http) TextView		id_tv_http;
 
-    }
+	@BindView(R.id.id_tv_aspectj) TextView	id_tv_aspectj;
 
+	@Override protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		ButterKnife.bind(this);
+
+	}
+
+	@OnClick({ R.id.id_tv_http, R.id.id_tv_aspectj }) public void onClick(View v) {
+		int id = v.getId();
+		switch (id) {
+			case R.id.id_tv_http:
+				startActivity(new Intent(MainActivity.this, HttpActivity.class));
+
+				break;
+			case R.id.id_tv_aspectj:
+				startActivity(new Intent(MainActivity.this, AOPActivity.class));
+
+				break;
+		}
+	}
 
 }

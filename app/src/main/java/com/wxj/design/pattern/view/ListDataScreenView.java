@@ -127,6 +127,9 @@ public class ListDataScreenView extends LinearLayout implements View.OnClickList
 		}
 
 		// 刚开始进来的时候，阴影和内容都是不显示的
+
+		// 打开和关闭tabview的变化，
+
 	}
 
 	private void setTabClick(final View tabView, final int position) {
