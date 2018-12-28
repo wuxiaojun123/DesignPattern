@@ -98,15 +98,17 @@ public class ListDataScreenView extends LinearLayout implements View.OnClickList
 	@Override protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
-		int height = MeasureSpec.getSize(heightMeasureSpec);
-		menuContentHeight = (height * 75f / 100);
+		if (menuContentHeight == 0) {
+			int height = MeasureSpec.getSize(heightMeasureSpec);
+			menuContentHeight = (height * 75f / 100);
 
-		ViewGroup.LayoutParams params = mMenuContainerView.getLayoutParams();
-		params.height = (int) menuContentHeight;
-		mMenuContainerView.setLayoutParams(params);
+			ViewGroup.LayoutParams params = mMenuContainerView.getLayoutParams();
+			params.height = (int) menuContentHeight;
+			mMenuContainerView.setLayoutParams(params);
 
-		Log.e(TAG, "mMenuContainerView=" + menuContentHeight);
-		mMenuContainerView.setTranslationY(-menuContentHeight);
+			Log.e(TAG, "mMenuContainerView=" + menuContentHeight);
+			mMenuContainerView.setTranslationY(-menuContentHeight);
+		}
 	}
 
 	public void setAdapter(BaseMenuAdapter adapter) {
@@ -142,13 +144,15 @@ public class ListDataScreenView extends LinearLayout implements View.OnClickList
 					if (mCurrentPosition == position) {
 						closeMenu();
 					} else { // 切换一下显示
-						View showView = mMenuContainerView.getChildAt(position);
-						showView.setVisibility(View.VISIBLE);
-
 						View currentPositioinView = mMenuContainerView.getChildAt(mCurrentPosition);
 						currentPositioinView.setVisibility(View.GONE);
+						mAdapter.menuClose(mMenuTabView.getChildAt(mCurrentPosition));
 
 						mCurrentPosition = position;
+
+						View showView = mMenuContainerView.getChildAt(position);
+						showView.setVisibility(View.VISIBLE);
+						mAdapter.menuOpen(mMenuTabView.getChildAt(mCurrentPosition));
 					}
 				}
 			}
@@ -160,13 +164,16 @@ public class ListDataScreenView extends LinearLayout implements View.OnClickList
 	 * 
 	 */
 	private void closeMenu() {
+		if(mAnimationExcutor){
+			return;
+		}
+
 		ObjectAnimator translationY = ObjectAnimator.ofFloat(mMenuContainerView, "translationY", 0, -menuContentHeight);
 		translationY.setDuration(DURATION);
 		translationY.start();
 
 		ObjectAnimator alphaAnim = ObjectAnimator.ofFloat(mShadowView, "alpha", 1f, 0f);
 		alphaAnim.setDuration(DURATION);
-		alphaAnim.start();
 		alphaAnim.addListener(new AnimatorListenerAdapter() {
 
 			@Override public void onAnimationEnd(Animator animation) {
@@ -176,9 +183,17 @@ public class ListDataScreenView extends LinearLayout implements View.OnClickList
 				View view = mMenuContainerView.getChildAt(mCurrentPosition);
 				view.setVisibility(View.GONE);
 
+				mAdapter.menuClose(mMenuTabView.getChildAt(mCurrentPosition));
 				mCurrentPosition = -1;
+
+				mAnimationExcutor = false;
+			}
+
+			@Override public void onAnimationStart(Animator animation) {
+				mAnimationExcutor = true;
 			}
 		});
+		alphaAnim.start();
 	}
 
 	/***
@@ -187,7 +202,7 @@ public class ListDataScreenView extends LinearLayout implements View.OnClickList
 	 * @param position
 	 * @param tabView
 	 */
-	private void openMenu(final int position, View tabView) {
+	private void openMenu(final int position, final View tabView) {
 		if (mAnimationExcutor) {
 			return;
 		}
@@ -214,6 +229,8 @@ public class ListDataScreenView extends LinearLayout implements View.OnClickList
 
 			@Override public void onAnimationStart(Animator animation) {
 				mAnimationExcutor = true;
+				// 把当前的tab，传到外边
+				mAdapter.menuOpen(tabView);
 			}
 		});
 		alphaAnim.start();

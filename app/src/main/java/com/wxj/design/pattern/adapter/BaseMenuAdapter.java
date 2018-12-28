@@ -19,4 +19,23 @@ public abstract class BaseMenuAdapter {
 	// 获取当前的菜单内容
 	public abstract View getMenuView(int position, ViewGroup parent);
 
+	/***
+	 * 菜单打开
+	 * 
+	 * @param tabView
+	 */
+	public void menuOpen(View tabView) {
+
+	}
+
+	/**
+	 * 8 菜单关闭
+	 * 
+	 * @param childAt
+	 */
+	public void menuClose(View childAt) {
+
+	}
+
+
 }

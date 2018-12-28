@@ -1,6 +1,7 @@
 package com.wxj.design.pattern.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,7 @@ public class ListScreenMenuAdapter extends BaseMenuAdapter {
 	@Override public View getTabView(int position, ViewGroup parent) {
 		TextView view = (TextView) LayoutInflater.from(mContext).inflate(R.layout.ui_list_data_screen_tab, parent, false);
 		view.setText(mItems[position]);
+		view.setTextColor(Color.BLACK);
 		return view;
 	}
 
@@ -38,6 +40,16 @@ public class ListScreenMenuAdapter extends BaseMenuAdapter {
 		TextView id_tv_content = (TextView) linearLayout.findViewById(R.id.id_tv_content);
 		id_tv_content.setText(mItems[position]);
 		return linearLayout;
+	}
+
+	@Override public void menuOpen(View tabView) {
+		TextView textView = (TextView) tabView;
+		textView.setTextColor(Color.RED);
+	}
+
+	@Override public void menuClose(View tabView) {
+		TextView textView = (TextView) tabView;
+		textView.setTextColor(Color.BLACK);
 	}
 
 }
