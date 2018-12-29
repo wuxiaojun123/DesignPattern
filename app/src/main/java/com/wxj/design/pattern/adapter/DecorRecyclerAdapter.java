@@ -23,6 +23,7 @@ public class DecorRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
 	public DecorRecyclerAdapter(RecyclerView.Adapter adapter) {
 		this.mRealAdapter = adapter;
 
+		// 当在mRealAdapter中改变数据的时候，得让DecorRecyclerAdapter也刷新
 		mRealAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
 
 			@Override public void onChanged() {

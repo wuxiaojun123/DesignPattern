@@ -16,10 +16,13 @@ import com.wxj.design.pattern.R;
 import com.wxj.design.pattern.adapter.DecorRecyclerAdapter;
 import com.wxj.design.pattern.view.DecorRecyclerview;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * // 业务逻辑层，能分开就分开，比如说注册页面和绑定用户手机页面，就是非常相似的业务逻辑，一定不要去封装 // 不包含业务逻辑的，一定要封装
  * Created by wuxiaojun on 2018/11/22.
  */
 
@@ -45,8 +48,7 @@ public class RecyclerviewActivity extends Activity {
 		id_recyclerview.setAdapter(adapter);
 		View view = LayoutInflater.from(this).inflate(R.layout.item_head, id_recyclerview, false);
 		id_recyclerview.addHeadView(view);
-		// 业务逻辑层，能分开就分开，比如说注册页面和绑定用户手机页面，就是非常相似的业务逻辑，一定不要去封装
-		// 不包含业务逻辑的，一定要封装
+
 	}
 
 	private class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
