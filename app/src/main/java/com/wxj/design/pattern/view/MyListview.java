@@ -4,6 +4,9 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 import java.util.List;
@@ -26,6 +29,7 @@ public class MyListview extends ListView {
 
 	public MyListview(Context context, AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
+
 	}
 
 	@Override
@@ -52,6 +56,30 @@ public class MyListview extends ListView {
 		boolean flag = super.onTouchEvent(ev);
 //		Log.e(TAG, "onTouchEvent==========" + flag);
 		return flag;
+	}
+
+	private class MyAdapter extends BaseAdapter{
+
+		@Override
+		public int getCount() {
+			return 0;
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return null;
+		}
+
+		@Override
+		public long getItemId(int position) {
+			return 0;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			return null;
+		}
+
 	}
 
 }

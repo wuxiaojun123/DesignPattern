@@ -3,12 +3,34 @@ package com.wxj.design.pattern.adapter;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.wxj.design.pattern.observe.MenuObserver;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 
  * 筛选菜单 Created by wuxiaojun on 2018/12/18.
  */
 
 public abstract class BaseMenuAdapter {
+
+	// 微信公众号
+	private MenuObserver menuObserver;
+
+	public void registerMenuObserver(MenuObserver menuObserver) {
+		this.menuObserver = menuObserver;
+	}
+
+	public void unRegisterMenuObserver() {
+		this.menuObserver = null;
+	}
+
+	public void closeMenu() {
+		if (menuObserver != null) {
+			menuObserver.closeMenu();
+		}
+	}
 
 	// 获取总共有多少条
 	public abstract int getCount();
@@ -36,6 +58,5 @@ public abstract class BaseMenuAdapter {
 	public void menuClose(View childAt) {
 
 	}
-
 
 }

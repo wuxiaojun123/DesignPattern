@@ -25,6 +25,7 @@
         <activity android:name=".activity.WuBaAnimActivity" />
         <activity android:name=".activity.HuaweiLoadingActivity" />
         <activity android:name=".activity.MultipleMenuActivity" />
+        <activity android:name=".activity.LottieActivity" />
 
     </application>
 

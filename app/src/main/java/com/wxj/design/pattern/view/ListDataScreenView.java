@@ -16,6 +16,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.wxj.design.pattern.adapter.BaseMenuAdapter;
+import com.wxj.design.pattern.observe.MenuObserver;
 
 /**
  * Created by wuxiaojun on 2018/12/1.
@@ -111,8 +112,17 @@ public class ListDataScreenView extends LinearLayout implements View.OnClickList
 		}
 	}
 
+	private MenuObserver menuObserver;
+
 	public void setAdapter(BaseMenuAdapter adapter) {
+		if(mAdapter != null && menuObserver != null){
+			mAdapter.unRegisterMenuObserver();
+		}
+
 		this.mAdapter = adapter;
+		// 注册观察者
+		menuObserver = new MyMenuObserver();
+		mAdapter.registerMenuObserver(menuObserver);
 
 		int count = mAdapter.getCount();
 		for (int i = 0; i < count; i++) {
@@ -131,6 +141,18 @@ public class ListDataScreenView extends LinearLayout implements View.OnClickList
 		// 刚开始进来的时候，阴影和内容都是不显示的
 
 		// 打开和关闭tabview的变化，
+
+	}
+
+	private class MyMenuObserver extends MenuObserver{
+
+		@Override
+		public void closeMenu() {
+			// 如果有注册就会收到通知
+			Log.e("ListDataScreenView","收到通知了");
+			ListDataScreenView.this.closeMenu();
+		}
+
 
 	}
 

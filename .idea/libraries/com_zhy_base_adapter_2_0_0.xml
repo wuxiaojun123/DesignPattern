@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.zhy:base-adapter-2.0.0">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/base-adapter-2.0.0.aar/37723f650a5c59e6568520a14c8e67be/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/base-adapter-2.0.0.aar/37723f650a5c59e6568520a14c8e67be/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/base-adapter-2.0.0.aar/85bc19e820486220efad00c5bcf2ec26/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/base-adapter-2.0.0.aar/85bc19e820486220efad00c5bcf2ec26/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

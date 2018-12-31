@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import com.wxj.design.pattern.R;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /***
  * 系统架构
  *
@@ -32,12 +35,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 	private TextView	id_recycler_custom_layoutmanager;
 
-	private TextView id_huawei_anim;
-
+	private TextView	id_huawei_anim;
 
 	@Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		ButterKnife.bind(this);
 
 		id_yahu = (TextView) findViewById(R.id.id_yahu);
 		id_kugou = (TextView) findViewById(R.id.id_kugou);
@@ -98,14 +101,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 				break;
 			case R.id.id_recycler_custom_layoutmanager:
-				startActivity(new Intent(MainActivity.this,CustomLayoutmanagerActivity.class));
+				startActivity(new Intent(MainActivity.this, CustomLayoutmanagerActivity.class));
 
 				break;
 			case R.id.id_huawei_anim:
-				startActivity(new Intent(MainActivity.this,HuaweiLoadingActivity.class));
+				startActivity(new Intent(MainActivity.this, HuaweiLoadingActivity.class));
 
 				break;
 
+		}
+	}
+
+	@OnClick({ R.id.id_lottie_anim }) public void click(View view) {
+		int id = view.getId();
+		switch (id) {
+			case R.id.id_lottie_anim:
+				startActivity(new Intent(MainActivity.this, LottieActivity.class));
+
+				break;
 		}
 	}
 

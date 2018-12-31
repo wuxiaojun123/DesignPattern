@@ -39,6 +39,20 @@ public class ListScreenMenuAdapter extends BaseMenuAdapter {
 		LinearLayout linearLayout = (LinearLayout) LayoutInflater.from(mContext).inflate(R.layout.ui_list_data_screen_menu, parent, false);
 		TextView id_tv_content = (TextView) linearLayout.findViewById(R.id.id_tv_content);
 		id_tv_content.setText(mItems[position]);
+		id_tv_content.setOnClickListener(new View.OnClickListener() {
+
+			@Override public void onClick(View v) {
+				// 通知ListDataScreenView去关闭菜单，如何做呢？
+
+				// 第一种：可以在Activity中监听点击事件，因为Activity中有ListDataScreenView和ListScreenMenuAdapter两个对象，这样就可以轻松达到目标
+
+				// 第二种：可以把ListDataScreenView传递到ListScreenMenuAdapter中，这样也可以达到目标，但是耦合度很高
+
+				// 第三种：通过观察者模式来解决(有观察者和被观察者)
+				closeMenu();
+			}
+		});
+
 		return linearLayout;
 	}
 
