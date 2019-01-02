@@ -70,6 +70,14 @@
             android:textColor="@color/aqua" />
 
         <TextView
+            android:id="@+id/id_nested_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="NestedScroll嵌套滑动事件"
+            android:textColor="@color/aqua" />
+
+        <TextView
             android:id="@+id/id_mutil_item"
             android:layout_width="match_parent"
             android:layout_height="50dp"

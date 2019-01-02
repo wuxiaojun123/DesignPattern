@@ -24,6 +24,8 @@
 
         <activity android:name=".http.HttpActivity" />
 
+        <activity android:name=".constraint.ConstraintActivity" />
+
     </application>
 
 </manifest>

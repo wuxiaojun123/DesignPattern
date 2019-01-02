@@ -112,11 +112,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		}
 	}
 
-	@OnClick({ R.id.id_lottie_anim }) public void click(View view) {
+	@OnClick({ R.id.id_lottie_anim,R.id.id_nested_scroll }) public void click(View view) {
 		int id = view.getId();
 		switch (id) {
 			case R.id.id_lottie_anim:
 				startActivity(new Intent(MainActivity.this, LottieActivity.class));
+
+				break;
+			case R.id.id_nested_scroll:
+				startActivity(new Intent(MainActivity.this, NestedScrollActivity.class));
 
 				break;
 		}

@@ -2,6 +2,7 @@ package com.wxj.design.pattern.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -11,6 +12,10 @@ import android.view.View;
  */
 
 public class HuaweiLoadingView extends View {
+
+	private Paint	mPaint;
+
+	private float	radius	= 5;
 
 	public HuaweiLoadingView(Context context) {
 		this(context, null);
@@ -23,11 +28,15 @@ public class HuaweiLoadingView extends View {
 	public HuaweiLoadingView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
 
+		mPaint = new Paint();
 	}
 
 	@Override protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
 
+		// for (int i=0;i < 7;i++){
+		// canvas.drawCircle();
+		// }
 
 	}
 

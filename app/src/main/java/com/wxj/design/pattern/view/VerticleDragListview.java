@@ -22,7 +22,7 @@ import android.widget.FrameLayout;
  * Created by wuxiaojun on 2018/11/24.
  */
 
-public class VerticleDragListview extends FrameLayout implements NestedScrollingParent {
+public class VerticleDragListview extends FrameLayout  {
 
 	public static final String	TAG	= "VerticleDragListview";
 
@@ -31,35 +31,6 @@ public class VerticleDragListview extends FrameLayout implements NestedScrolling
 	private View				mDragListView;
 
 	private int					mMenuHeight;
-
-	/***
-	 * 开始嵌套滑动
-	 * 
-	 * @param axes
-	 *            表示方向轴，横向或者纵向
-	 * @return
-	 */
-	@Override public boolean startNestedScroll(int axes) {
-		return super.startNestedScroll(axes);
-	}
-
-
-	@Override
-	public boolean onStartNestedScroll(View child, View target, int nestedScrollAxes) {
-		return super.onStartNestedScroll(child, target, nestedScrollAxes);
-	}
-
-	@Override
-	public void onNestedPreScroll(View target, int dx, int dy, int[] consumed) {
-		super.onNestedPreScroll(target, dx, dy, consumed);
-	}
-
-	@Override
-	public boolean onNestedFling(View target, float velocityX, float velocityY, boolean consumed) {
-		return super.onNestedFling(target, velocityX, velocityY, consumed);
-	}
-
-
 
 	public VerticleDragListview(@NonNull Context context) {
 		this(context, null);

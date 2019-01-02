@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.wxj.datastructure.aop.AOPActivity;
+import com.wxj.datastructure.constraint.ConstraintActivity;
 import com.wxj.datastructure.http.HttpActivity;
 
 import butterknife.BindView;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 	}
 
-	@OnClick({ R.id.id_tv_http, R.id.id_tv_aspectj }) public void onClick(View v) {
+	@OnClick({ R.id.id_tv_http, R.id.id_tv_aspectj, R.id.id_tv_constraint }) public void onClick(View v) {
 		int id = v.getId();
 		switch (id) {
 			case R.id.id_tv_http:
@@ -42,6 +43,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 				break;
 			case R.id.id_tv_aspectj:
 				startActivity(new Intent(MainActivity.this, AOPActivity.class));
+
+				break;
+			case R.id.id_tv_constraint:
+				startActivity(new Intent(MainActivity.this, ConstraintActivity.class));
 
 				break;
 		}

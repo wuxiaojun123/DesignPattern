@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    >
+
+    <Button
+        android:id="@+id/id_btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="左移text" />
+
+    <Button
+        android:id="@+id/id_btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="右移text"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/id_fl_content"
+        android:layout_width="0dp"
+        android:layout_height="500dp"
+        app:layout_constraintHorizontal_weight="4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/id_fl_video"
+        app:layout_constraintTop_toBottomOf="@id/id_btn_left">
+
+        <WebView
+            android:id="@+id/id_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/id_fl_video"
+        android:layout_width="0dp"
+        android:layout_height="500dp"
+        android:background="@color/colorPrimaryDark"
+        android:clipChildren="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/id_fl_content"
+        app:layout_constraintTop_toBottomOf="@id/id_btn_right">
+
+        <com.wxj.datastructure.DragTextView
+            android:id="@+id/id_tv_text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="拖动我"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>
