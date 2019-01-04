@@ -106,6 +106,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    // eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
 
     //aspectjrt的依赖
 //    implementation 'org.aspectj:aspectjrt:1.8.9'

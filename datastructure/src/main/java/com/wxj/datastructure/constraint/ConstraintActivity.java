@@ -1,21 +1,17 @@
 package com.wxj.datastructure.constraint;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
 import android.support.v4.widget.ViewDragHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 
-import com.wxj.datastructure.DragTextView;
+import com.wxj.datastructure.view.DragTextView;
 import com.wxj.datastructure.R;
 
 import butterknife.BindView;
@@ -30,8 +26,7 @@ public class ConstraintActivity extends AppCompatActivity {
 
 	private final static String				TAG	= "ConstraintActivity";
 
-	@BindView(R.id.id_tv_text)
-	DragTextView id_tv_text;
+	@BindView(R.id.id_tv_text) DragTextView	id_tv_text;
 
 	@BindView(R.id.id_btn_right) Button		id_btn_right;
 

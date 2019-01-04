@@ -12,6 +12,10 @@ import com.wxj.datastructure.aop.AOPActivity;
 import com.wxj.datastructure.constraint.ConstraintActivity;
 import com.wxj.datastructure.http.HttpActivity;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -34,6 +38,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 	}
 
+	@Override protected void onStart() {
+		super.onStart();
+
+		EventBus.getDefault().register(this);
+	}
+
 	@OnClick({ R.id.id_tv_http, R.id.id_tv_aspectj, R.id.id_tv_constraint }) public void onClick(View v) {
 		int id = v.getId();
 		switch (id) {
@@ -52,4 +62,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		}
 	}
 
+	@Subscribe(threadMode = ThreadMode.MAIN,priority = 100) private void updateText(String msg) {
+		id_tv_http.setText(msg);
+	}
+
+	@Override protected void onStop() {
+		super.onStop();
+
+		EventBus.getDefault().unregister(this);
+	}
 }

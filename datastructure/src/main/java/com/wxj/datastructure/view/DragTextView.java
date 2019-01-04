@@ -1,4 +1,4 @@
-package com.wxj.datastructure;
+package com.wxj.datastructure.view;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -56,7 +56,6 @@ public class DragTextView extends TextView {
 			case MotionEvent.ACTION_CANCEL:
 				downX = (int) event.getRawX();
 				downY = (int) event.getRawY();
-
 				break;
 		}
 		return true;

@@ -109,6 +109,14 @@
             android:text="lottie效果"
             android:textColor="@color/aqua" />
 
+        <TextView
+            android:id="@+id/id_ripple"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="水波纹效果"
+            android:textColor="@color/aqua" />
+
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
