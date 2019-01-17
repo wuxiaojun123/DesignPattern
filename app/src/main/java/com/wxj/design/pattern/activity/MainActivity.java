@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		}
 	}
 
-	@OnClick({ R.id.id_lottie_anim, R.id.id_nested_scroll, R.id.id_ripple }) public void click(View view) {
+	@OnClick({ R.id.id_lottie_anim, R.id.id_nested_scroll, R.id.id_ripple, R.id.id_beisaier }) public void click(View view) {
 		int id = view.getId();
 		switch (id) {
 			case R.id.id_lottie_anim:
@@ -125,6 +125,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 				break;
 			case R.id.id_ripple:
 				startActivity(new Intent(MainActivity.this, RippleActivity.class));
+
+				break;
+			case R.id.id_beisaier:
+				startActivity(new Intent(MainActivity.this,BeisaierActivity.class));
 
 				break;
 		}

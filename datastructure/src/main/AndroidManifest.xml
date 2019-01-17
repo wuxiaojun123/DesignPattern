@@ -24,7 +24,9 @@
 
         <activity android:name=".http.HttpActivity" />
 
-        <activity android:name=".constraint.ConstraintActivity" />
+
+        <activity android:name=".eventbus.EventBusActivity" />
+
 
     </application>
 

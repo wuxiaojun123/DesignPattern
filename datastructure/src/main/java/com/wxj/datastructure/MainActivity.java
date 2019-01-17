@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.wxj.datastructure.aop.AOPActivity;
 import com.wxj.datastructure.constraint.ConstraintActivity;
+import com.wxj.datastructure.eventbus.EventBusActivity;
 import com.wxj.datastructure.http.HttpActivity;
 
 import org.greenrobot.eventbus.EventBus;
@@ -41,10 +42,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	@Override protected void onStart() {
 		super.onStart();
 
-		EventBus.getDefault().register(this);
+		// EventBus.getDefault().register(this);
 	}
 
-	@OnClick({ R.id.id_tv_http, R.id.id_tv_aspectj, R.id.id_tv_constraint }) public void onClick(View v) {
+	@OnClick({ R.id.id_tv_http, R.id.id_tv_aspectj, R.id.id_tv_constraint, R.id.id_tv_event_bus }) public void onClick(View v) {
 		int id = v.getId();
 		switch (id) {
 			case R.id.id_tv_http:
@@ -59,16 +60,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 				startActivity(new Intent(MainActivity.this, ConstraintActivity.class));
 
 				break;
+			case R.id.id_tv_event_bus:
+				startActivity(new Intent(MainActivity.this, EventBusActivity.class));
+
+				break;
+
 		}
 	}
 
-	@Subscribe(threadMode = ThreadMode.MAIN,priority = 100) private void updateText(String msg) {
-		id_tv_http.setText(msg);
-	}
+	// @Subscribe(threadMode = ThreadMode.MAIN,priority = 100) private void
+	// updateText(String msg) {
+	// id_tv_http.setText(msg);
+	// }
 
 	@Override protected void onStop() {
 		super.onStop();
 
-		EventBus.getDefault().unregister(this);
+		// EventBus.getDefault().unregister(this);
 	}
 }

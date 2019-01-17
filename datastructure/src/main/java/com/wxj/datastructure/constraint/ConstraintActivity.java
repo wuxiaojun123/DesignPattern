@@ -44,7 +44,6 @@ public class ConstraintActivity extends AppCompatActivity {
 		id_webview.getSettings().setJavaScriptEnabled(true);
 		id_webview.loadUrl("https://www.baidu.com/");
 
-		ViewDragHelper viewDragHelper = ViewDragHelper.create(id_fl_video, 1.0f, new ViewCallback());
 	}
 
 	@OnClick({ R.id.id_btn_right, R.id.id_btn_left }) public void click(View view) {
@@ -80,14 +79,6 @@ public class ConstraintActivity extends AppCompatActivity {
 			id_tv_text.setLayoutParams(layoutParams);
 
 		}
-	}
-
-	private class ViewCallback extends ViewDragHelper.Callback {
-
-		@Override public boolean tryCaptureView(@NonNull View view, int i) {
-			return false;
-		}
-
 	}
 
 }

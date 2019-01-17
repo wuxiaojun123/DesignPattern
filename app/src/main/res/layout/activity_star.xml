@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_fl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/id_start"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="开始动画" />
+
+    <com.wxj.design.pattern.view.StarView4
+        android:id="@+id/id_starview"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center" />
+
+    <com.wxj.design.pattern.view.StarLayout
+        android:id="@+id/id_star_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        />
+
+</FrameLayout>

@@ -117,6 +117,14 @@
             android:text="水波纹效果"
             android:textColor="@color/aqua" />
 
+        <TextView
+            android:id="@+id/id_beisaier"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="贝塞尔曲线"
+            android:textColor="@color/aqua" />
+
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
