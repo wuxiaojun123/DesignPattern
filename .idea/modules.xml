@@ -3,18 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DesignPattern.iml" filepath="$PROJECT_DIR$/DesignPattern.iml" />
-      <module fileurl="file://$PROJECT_DIR$/DesignPattern.iml" filepath="$PROJECT_DIR$/DesignPattern.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/datastructure/datastructure.iml" filepath="$PROJECT_DIR$/datastructure/datastructure.iml" />
-      <module fileurl="file://$PROJECT_DIR$/datastructure/datastructure.iml" filepath="$PROJECT_DIR$/datastructure/datastructure.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java_data_structure/java_data_structure.iml" filepath="$PROJECT_DIR$/java_data_structure/java_data_structure.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_data_structure/java_data_structure.iml" filepath="$PROJECT_DIR$/java_data_structure/java_data_structure.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_designpattern/java_designpattern.iml" filepath="$PROJECT_DIR$/java_designpattern/java_designpattern.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java_designpattern/java_designpattern.iml" filepath="$PROJECT_DIR$/java_designpattern/java_designpattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_designpattern_test/java_designpattern_test.iml" filepath="$PROJECT_DIR$/java_designpattern_test/java_designpattern_test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java_designpattern_test/java_designpattern_test.iml" filepath="$PROJECT_DIR$/java_designpattern_test/java_designpattern_test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java_jichu/java_jichu.iml" filepath="$PROJECT_DIR$/java_jichu/java_jichu.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_jichu/java_jichu.iml" filepath="$PROJECT_DIR$/java_jichu/java_jichu.iml" />
     </modules>
   </component>

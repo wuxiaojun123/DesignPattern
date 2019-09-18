@@ -48,8 +48,8 @@ public class StarActivity extends AppCompatActivity {
 		int id = view.getId();
 		switch (id) {
 			case R.id.id_start:
-				// id_starview.clearAnimation();
-				// id_starview.startAnimation(10, 3000, 0);
+				 id_starview.clearAnimation();
+				 id_starview.startAnimation(10, 3000, 0);
 				id_star_layout.startRingAnim();
 
 				break;
