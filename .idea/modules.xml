@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/java_designpattern/java_designpattern.iml" filepath="$PROJECT_DIR$/java_designpattern/java_designpattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_designpattern_test/java_designpattern_test.iml" filepath="$PROJECT_DIR$/java_designpattern_test/java_designpattern_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_jichu/java_jichu.iml" filepath="$PROJECT_DIR$/java_jichu/java_jichu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_thread/java_thread.iml" filepath="$PROJECT_DIR$/java_thread/java_thread.iml" />
     </modules>
   </component>
 </project>

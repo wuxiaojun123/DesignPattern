@@ -13,12 +13,24 @@ public class DependecyTest {
 
 }
 
-class Email{
+interface IReceive{
+    public String getInfo();
+}
 
+class Email implements IReceive{
+
+    @Override
     public String getInfo(){
         return "电子邮件信息，hello world";
     }
 
+}
+
+class WeiXin implements IReceive{
+    @Override
+    public String getInfo() {
+        return "微信信息，hello world";
+    }
 }
 
 class Person {
